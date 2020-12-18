@@ -5,16 +5,19 @@ import FilterForm from "./FilterForm";
 
 function NavBar({ handleAdd, handleFilter }) {
     return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand>My Movie List App</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Add handleAdd={handleAdd} />
-                </Nav>
-                <FilterForm handleFilter={handleFilter} />
-            </Navbar.Collapse>
-        </Navbar>
+        <div className="mb-4 bg-dark" variant="dark">
+            <Navbar expand="lg" className="container" >
+                <h1 >My Movie List App</h1>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Add handleAdd={handleAdd} />
+                    </Nav>
+                    <FilterForm handleFilter={handleFilter} />
+                </Navbar.Collapse>
+            </Navbar>
+        </div>
+
     )
 }
 

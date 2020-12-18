@@ -5,11 +5,12 @@ function FilterForm({ handleFilter }) {
     const [filterTitle, setFilterTitle] = useState('');
     const [filterRate, setFilterRate] = useState('');
 
-    const onSubmit = () => {
+    const onSubmit = (e) => {
+        e.preventDefault();
         handleFilter(filterTitle, filterRate)
     }
     return (
-        <Form inline>
+        <Form inline onSubmit={onSubmit}>
             <FormControl type="text" placeholder="Search" className="mr-sm-2"
                 value={filterTitle} onChange={(e) => setFilterTitle(e.target.value)} />
             <Form.Control
@@ -26,7 +27,7 @@ function FilterForm({ handleFilter }) {
                 <option value="4">⭐⭐⭐⭐</option>
                 <option value="5">⭐⭐⭐⭐⭐</option>
             </Form.Control>
-            <Button variant="outline-success" onClick={onSubmit}>Search</Button>
+            <Button variant="outline-danger" onClick={onSubmit}>Search</Button>
         </Form>
     )
 }

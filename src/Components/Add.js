@@ -15,7 +15,7 @@ function Add({ handleAdd }) {
             setShow(false),
             setTitle(""),
             setDescription(""),
-            setPosterUrl(""),
+            setPosterUrl("./519xOk+VYDL._AC_SY741_.jpg"),
             setRate("")
         )
     }

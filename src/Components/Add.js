@@ -6,7 +6,7 @@ function Add({ handleAdd }) {
     const [show, setShow] = useState(false);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [posterUrl, setPosterUrl] = useState('');
+    const [posterUrl, setPosterUrl] = useState('./519xOk+VYDL._AC_SY741_.jpg');
     const [rate, setRate] = useState('');
 
     const addMovie = () => {
